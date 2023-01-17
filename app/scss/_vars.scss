@@ -1,1 +1,12 @@
 //variables & mixin
+$--color-red: #fe3e57;
+$--color-black: #29282d;
+$--color-text: #8d8d8d;
+
+%--ff-sf{
+  font-family: 'SF Pro Display' , sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: $--color-text;
+}

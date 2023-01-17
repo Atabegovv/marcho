@@ -4,7 +4,72 @@
 @import 'global';
 
 
-
+.header{
+  padding: 40px 0;
+  &-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.menu{
+  text-transform: uppercase;
+  &-list{
+    display: flex;
+    &__item {
+      & + & {
+        margin-left: 30px;
+      }
+    }
+    &__link{
+      padding: 5px;
+      line-height: 1;
+      display: block;
+      position: relative;
+      transition: all .3s;
+      &::after{
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 0%;
+        background-color: $--color-red;
+        left: 50%;
+        bottom: 0;
+        transition: .4s;
+      }
+      &:hover{
+        color: $--color-red;
+        &::after {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.user-nav{
+  display: flex;
+  &__link {
+    position: relative;
+    & + & {
+      margin-left: 25px;
+    }
+  }
+  &__num{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $--color-red;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    position: absolute;
+    top: -9px;
+    left: 14px;
+  }
+}
 
 
 
