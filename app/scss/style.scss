@@ -168,9 +168,142 @@
   }
 }
 //slick-slider
-  
 
-
+.categoria-info{
+  background-image: url(../images/categoria-bg-left.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  &__wrapper{
+    background-image: url(../images/categoria-bg-right.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+.info{
+  padding: 120px 0 100px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: "";
+    background-image: url(../images/info-decor.png);
+    width: 120px;
+    height: 121px;
+    top: 75px;
+    left: -45px;
+    z-index: -1;
+  }
+  &::after{
+    position: absolute;
+    content: "";
+    background-image: url(../images/info-decor2.png);
+    width: 65px;
+    height: 52px;
+    bottom: 80px;
+    right: -20px;
+    z-index: -1;
+  }
+  &-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.info-item{
+  background-color: #fff;
+  box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+  width: 370px;
+  padding: 60px 30px;
+  text-align: center;
+  &__img{
+    margin: 0 auto;
+    margin-bottom: 30px;
+    transition: all .5s;
+  }
+  &__title{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  &__text{
+    @extend %--ff-sf;
+  }
+  &:hover img{
+    transform: scale(1.1);
+  }
+}
+.categoria{
+  &-wrapper{
+    display: grid;
+    min-height: 636px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin: 50px 0 120px;
+  }
+}
+.categoria-item{
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  padding: 30px 40px;
+  &:nth-child(1){
+    grid-row: span 2;
+    .categoria-item__info{
+      color: #5800e4;
+    }
+  }
+  &:nth-child(2){
+    grid-column: span 2;
+    .categoria-item__info{
+      color: $--color-red;
+    }
+  }
+  &:nth-child(3){
+    .categoria-item__info{
+      color: #ffb534;
+    }
+  }
+  &:nth-child(4){
+    .categoria-item__info{
+      color: #34c3ff;
+    }
+  }
+  &__info{
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  &__title{
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__link{
+    text-transform: uppercase;
+    font-weight: 400;
+    display: inline-block;
+    transition: all .4s;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: "";
+      width: 0px;
+      height: 1px;
+      background-color: $--color-red;
+      right: 0;
+      left: auto;
+      bottom: -5px;
+      transition: all .4s;
+    }
+  }
+  &:hover{
+    .categoria-item__link{
+      color: $--color-red;
+      &::after{
+        width: 100%;
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+}
 
 
 
