@@ -485,6 +485,7 @@
   margin: 0 auto;
   padding: 12px 28px;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 2px;
   background-color: #fff;
   border: 1px solid $--color-red;
@@ -495,6 +496,63 @@
     box-shadow: 0px 7px 20px 0px rgb(192 192 192 / 30%);
   }
 }
+
+.promo{
+  background-image: url(../images/promo-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  &-inner{
+    max-width: 570px;
+    margin-left: auto;
+    padding: 150px 0;
+  }
+  &-desc{
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    color: $--color-red;
+    margin-bottom: 20px;
+  }
+  &-title{
+    margin-bottom: 50px;
+  }
+}
+.partner{
+  padding: 120px 0 100px;
+  background-color: #fff;
+  &-list{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.promo-clock{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 55px;
+  &__circle{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-number{
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 50px;
+      margin-bottom: 10px;
+    }
+    &-text{
+      @extend %--ff-sf;
+      line-height: 1;
+    }
+  }
+}
+
 
 
 
