@@ -11,4 +11,11 @@ $(function () {
     autoplaySpeed: 2000,
   });
   
+  $(".product-card__stars").rateYo({
+    starWidth: "17px",
+    ratedFill: "#ffc35b",
+    normalFill: "#ccccce",
+    readOnly: true,
+  });
+
 });
