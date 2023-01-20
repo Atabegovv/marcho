@@ -21,6 +21,15 @@ $(function () {
 
 
 
+  $(".tab_item").not(":first").hide();
+  $(".tabs-wrapper .tab").click(function() {
+    $(".tabs-wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+    $(".tab_item").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("active");
+
+
+
+
   function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
@@ -56,9 +65,5 @@ $(function () {
   }
   const deadline = $('.promo-clock').attr('data-time');
   initializeClock('promo-clock', deadline);
-
-
-
-
 
 });

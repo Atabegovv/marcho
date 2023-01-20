@@ -689,6 +689,77 @@
   }
 }
 
+.login{
+  padding: 110px 0;
+  @extend %--ff-sf;
+  &-wrapper{
+    max-width: 570px;
+    margin: 0 auto;
+  }
+  &-tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  &-tab{
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 30px;
+    letter-spacing: 2px;
+    transition: all .3s;
+    &.active{
+      font-weight: 700;
+      color: $--color-red;
+    }
+    &:hover{
+      color: $--color-red;
+    }
+  }
+  &-label{
+    display: block;
+    width: 100%;
+  }
+  &-input{
+    display: block;
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 17px 10px;
+    font-size: 22px;
+    color: $--color-text;
+    margin: 10px 0 35px;
+  }
+  &-text{
+    margin-bottom: 35px;
+    padding-right: 5px;
+  }
+  &-checkbox__label{
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  &-btn{
+    display: block;
+    width: 100%;
+    padding: 17px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: #292929;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all .5s;
+    &:hover{
+      background-color: $--color-red;
+    }
+  }
+  &-forget-link{
+    display: inline-block;
+    color: $--color-red;
+  }
+}
 
 
 
