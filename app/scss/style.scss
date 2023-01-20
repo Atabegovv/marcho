@@ -645,7 +645,49 @@
   }
 }
 
-
+.breadcrumbs{
+  &-wrapper{
+    background-image: url(../images/bcr-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    padding: 125px 0;
+  }
+  .title{
+    margin-bottom: 20px;
+  }
+  &-list{
+    display: flex;
+    justify-content: center;
+  }
+  &-item{
+    padding-left: 40px;
+    @extend %--ff-sf;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: "";
+      background-image: url(../images/svg/bcr-arrow.svg);
+      width: 9px;
+      height: 10px;
+      top: 8px;
+      left: 15px;
+    }
+    &:first-child{
+      padding-left: 25px;
+      &::before{
+        background-image: url(../images/svg/home.svg);
+        width: 16px;
+        height: 16px;
+        top: 3px;
+        left: 0;
+      }
+    }
+    &:last-child{
+      color: $--color-red;
+    }
+  }
+}
 
 
 
