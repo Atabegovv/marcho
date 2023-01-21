@@ -28,6 +28,19 @@ $(function () {
   }).eq(0).addClass("active");
 
 
+  $(".price-range__slider").ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    onStart: function (data) {
+      $(".price-range__info-from").text(data.from);
+      $(".price-range__info-to").text(data.to);
+    },
+    onChange: function (data) {
+      $(".price-range__info-from").text(data.from);
+      $(".price-range__info-to").text(data.to);
+    },
+  });
+
 
 
   function getTimeRemaining(endtime) {
