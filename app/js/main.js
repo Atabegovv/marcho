@@ -43,6 +43,27 @@ $(function () {
 
 
 
+  $('.catalog-top__select').styler();
+
+
+  const items = document.querySelector('.items');
+    const temp = localStorage.getItem('temp');
+    items.dataset.temp = temp;
+    document.querySelectorAll('button[data-view]').forEach(item => {
+      item.addEventListener('click', () => {
+        const view = item.dataset.view;
+        items.dataset.temp = view;
+        localStorage.setItem('temp', view);
+      });
+    });
+
+
+
+
+
+
+
+
   function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
