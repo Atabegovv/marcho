@@ -97,7 +97,7 @@ $(function () {
 
 
 
-  function getTimeRemaining(endtime) {
+  /* function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
@@ -131,6 +131,6 @@ $(function () {
     const timeinterval = setInterval(updateClock, 1000);
   }
   const deadline = $('.promo-clock').attr('data-time');
-  initializeClock('promo-clock', deadline);
+  initializeClock('promo-clock', deadline); */
 
 });
