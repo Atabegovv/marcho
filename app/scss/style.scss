@@ -117,6 +117,11 @@
   color:#fff;
   letter-spacing: 2px;
   cursor: pointer;
+  transition: all .3s;
+  &:hover{
+    box-shadow: none;
+    transform: translateX(5px);
+  }
 }
 //slick-slider
 .slick-dots{
@@ -217,7 +222,7 @@
   &__img{
     margin: 0 auto;
     margin-bottom: 30px;
-    transition: all .5s;
+    animation: info-icon 5s infinite;
   }
   &__title{
     font-size: 22px;
@@ -227,10 +232,14 @@
   &__text{
     @extend %--ff-sf;
   }
-  &:hover img{
-    transform: scale(1.1);
-  }
 }
+@keyframes info-icon{
+  0%{transform: translateY(10px);}
+  50%{transform: translateY(-20px);}
+  100%{transform: translateY(10px);}
+}
+
+
 .categoria{
   &-wrapper{
     display: grid;
@@ -246,9 +255,14 @@
 .categoria-item{
   display: block;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: top right;
   padding: 30px 40px;
+  transition: all .5s;
+  &:hover{
+    // transform: scale(1.05);
+    background-size: 107%;
+  }
   &:nth-child(1){
     grid-row: span 2;
     .categoria-item__info{
@@ -379,6 +393,7 @@
   }
 }
 .product-card{
+  background-color: #fff;
   max-width: 370px;
   transition: all .2s;
   &__top{
@@ -548,20 +563,23 @@
 
 
 .show-more{
-  display: block;
-  width: 170px;
-  margin: 0 auto;
-  padding: 12px 28px;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 2px;
-  background-color: #fff;
-  border: 1px solid $--color-red;
-  transition: all .5s;
-  &:hover{
-    background-color: $--color-red;
-    color: #fff;
-    box-shadow: 0px 7px 20px 0px rgb(192 192 192 / 30%);
+  display: flex;
+  justify-content: center;
+  &__btn{
+    display: inline-block;
+    text-align: center;
+    padding: 12px 28px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    background-color: #fff;
+    border: 1px solid $--color-red;
+    transition: all .5s;
+    &:hover{
+      background-color: $--color-red;
+      color: #fff;
+      box-shadow: 0px 7px 20px 0px rgb(192 192 192 / 30%);
+    }
   }
 }
 
@@ -624,6 +642,7 @@
 .blog{
   background-image: url(../images/blog-bg.png);
   background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 160px;
   .title{
     margin-bottom: 15px;
@@ -635,6 +654,7 @@
   }
 }
 .blog-card{
+  background-color: #fff;
   max-width: 370px;
   overflow: hidden;
   box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
@@ -953,10 +973,10 @@
     }
   }
   &__checkbox{
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     position: absolute;
-    top: 14px;
+    top: 15px;
     right: 0;
     border: 1px solid transparent;
     &::after{
@@ -2042,6 +2062,11 @@
   }
   &__link {
     margin-bottom: 10px;
+    transition: all .3s;
+    &:hover{
+      color: $--color-red;
+      transform: translateX(5px);
+    }
   }
 }
 .footer-social{

@@ -12,26 +12,20 @@ $(function () {
   });
 
 
-  
   $('.productone-slider__nav').slick({
     asNavFor: '.productone-slider__show',
     focusOnSelect: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     vertical: true,
-    // draggable: false,
     dots: false,
     arrows: false,
     infinite: true,
-    // fade: true,
-    // speed: 500,
-    // cssEase: 'linear',
   });
   $('.productone-slider__show').slick({
     asNavFor: '.productone-slider__nav',
     slidesToShow: 1,
     slidesToScroll: 1,
-    // draggable: false,
     dots: false,
     arrows: false,
     infinite: true,
@@ -49,7 +43,6 @@ $(function () {
 
 
 
-  
   $(".product-card__stars").rateYo({
     starWidth: "17px",
     ratedFill: "#ffc35b",
@@ -61,7 +54,7 @@ $(function () {
 
 
   $(".tab_item").not(":first").hide();
-  $(".tabs-wrapper .tab").click(function() {
+  $(".tabs-wrapper .tab").click(function () {
     $(".tabs-wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
     $(".tab_item").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("active");
@@ -86,57 +79,51 @@ $(function () {
 
 
   const items = document.querySelector('.items');
-    const temp = localStorage.getItem('temp');
-    items.dataset.temp = temp;
-    document.querySelectorAll('button[data-view]').forEach(item => {
-      item.addEventListener('click', () => {
-        const view = item.dataset.view;
-        items.dataset.temp = view;
-        localStorage.setItem('temp', view);
-      });
+  const temp = localStorage.getItem('temp');
+  items.dataset.temp = temp;
+  document.querySelectorAll('button[data-view]').forEach(item => {
+    item.addEventListener('click', () => {
+      const view = item.dataset.view;
+      items.dataset.temp = view;
+      localStorage.setItem('temp', view);
     });
+  });
 
-
-
-
-
-
-
-
-  /* function getTimeRemaining(endtime) {
-    const total = Date.parse(endtime) - Date.parse(new Date());
-    const seconds = Math.floor((total / 1000) % 60);
-    const minutes = Math.floor((total / 1000 / 60) % 60);
-    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-    const days = Math.floor(total / (1000 * 60 * 60 * 24));
-    return {
-      total,
-      days,
-      hours,
-      minutes,
-      seconds
-    };
-  }
-  function initializeClock(id, endtime) {
-    const clock = document.getElementById(id);
-    const daysSpan = clock.querySelector('.days');
-    const hoursSpan = clock.querySelector('.hours');
-    const minutesSpan = clock.querySelector('.minutes');
-    const secondsSpan = clock.querySelector('.seconds');
-    function updateClock() {
-      const t = getTimeRemaining(endtime);
-      daysSpan.innerHTML = t.days;
-      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-      if (t.total <= 0) {
-        clearInterval(timeinterval);
-      }
-    }
-    updateClock();
-    const timeinterval = setInterval(updateClock, 1000);
-  }
-  const deadline = $('.promo-clock').attr('data-time');
-  initializeClock('promo-clock', deadline); */
 
 });
+
+function getTimeRemaining(endtime) {
+  const total = Date.parse(endtime) - Date.parse(new Date());
+  const seconds = Math.floor((total / 1000) % 60);
+  const minutes = Math.floor((total / 1000 / 60) % 60);
+  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  return {
+    total,
+    days,
+    hours,
+    minutes,
+    seconds
+  };
+}
+function initializeClock(id, endtime) {
+  const clock = document.getElementById(id);
+  const daysSpan = clock.querySelector('.days');
+  const hoursSpan = clock.querySelector('.hours');
+  const minutesSpan = clock.querySelector('.minutes');
+  const secondsSpan = clock.querySelector('.seconds');
+  function updateClock() {
+    const t = getTimeRemaining(endtime);
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+  updateClock();
+  const timeinterval = setInterval(updateClock, 1000);
+}
+const deadline = $('.promo-clock').attr('data-time');
+initializeClock('timer', deadline);
