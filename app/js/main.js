@@ -1,5 +1,9 @@
 $(function () {
 
+  $('.burger-menu').on('click' , function(){
+    $('.menu , .user-nav , .burger-line').toggleClass('active');
+  });
+
   $('.slider').slick({
     dots: true,
     arrows: false,
@@ -91,6 +95,20 @@ $(function () {
 
 
 });
+
+let acc = document.getElementsByClassName("accordion");
+    let i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
 
 function getTimeRemaining(endtime) {
   const total = Date.parse(endtime) - Date.parse(new Date());
