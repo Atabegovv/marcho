@@ -48,6 +48,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
   }
+  .contacts-info{
+    max-width: 300px;
+    width: 100%;
+  }
 }
 @media (max-width: 1100px){
   .footer-top{
@@ -109,8 +113,22 @@
     justify-items: center;
   }
 }
-@media (max-width: 960px){
-  
+@media (max-width: 1000px){
+  .contacts{
+    &-info__title{
+      font-size: 28px;
+      text-align: center;
+    }
+    .feedback-form{
+      &__personal-dates{
+        display: block;
+      }
+      &__author-mail{
+        margin-left: 0;
+      }
+    }
+    
+  }
 }
 @media (max-width: 900px){
   .burger-menu{
@@ -191,6 +209,9 @@
     &-list{
       justify-content: start;
     }
+  }
+  .map{
+    padding: 50px 0;
   }
 }
 @media (max-width: 720px){
@@ -320,6 +341,14 @@
     grid-template-columns: repeat(1, 1fr);
 
   }
+  .contacts{
+    &-wrapper{
+      display: block;
+    }
+    &-info{
+      margin: 0 auto;
+    }
+  }
 }
 @media (max-width: 640px){
   .partner-list{
@@ -327,6 +356,9 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 20px;
+  }
+  #map{
+    height: 350px;
   }
 }
 @media (max-width: 520px){
@@ -340,6 +372,11 @@
   }
   .blog{
     margin-bottom: 100px;
+  }
+  .contacts-form{
+    padding: 20px 0px;
+    border: none;
+    box-shadow: none;
   }
 }
 @media (max-width: 500px){
@@ -394,6 +431,9 @@
       max-width: 370px;
       margin: 0 auto;
     }
+  }
+  #map{
+    height: 300px;
   }
 }
 @media (max-width: 370px){
