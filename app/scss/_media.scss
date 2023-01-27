@@ -179,6 +179,19 @@
       padding: 100px 0;
     }
   }
+  .breadcrumbs{
+    &-wrapper{
+      background-image: none;
+      background-color: #ececec;
+      padding: 5px;
+      .title{
+        display: none;
+      }
+    }
+    &-list{
+      justify-content: start;
+    }
+  }
 }
 @media (max-width: 720px){
   .footer-top{
