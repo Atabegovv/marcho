@@ -148,7 +148,7 @@
   &-title{
     font-weight: 700;
     font-size: 58px;
-    line-height: 58px;
+    line-height: 68px;
     margin-bottom: 20px;
   }
   &-text{
@@ -156,10 +156,17 @@
     max-width: 470px;
     margin-bottom: 50px;
   }
+  &-img{
+    width: 650px;
+    height: 650px;
+    // object-fit: cover;
+  }
 }
 .buy-btn{
   display: inline-block;
   text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1;
   padding: 14px 35px;
   background-color: $--color-red;
   box-shadow: 0px 10px 25px 0px rgba(254, 62, 87, 0.3);
@@ -260,6 +267,7 @@
   &-wrapper{
     display: flex;
     justify-content: space-between;
+    gap: 30px;
   }
 }
 .info-item{
@@ -268,6 +276,9 @@
   width: 370px;
   padding: 60px 30px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   &__img{
     margin: 0 auto;
     margin-bottom: 30px;
@@ -386,7 +397,8 @@
   &__img{
     display: block;
     width: 530px;
-    min-height: 480px;
+    height: 480px;
+    object-fit: cover;
     margin-right: 60px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -671,6 +683,7 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    background-color: #fff;
     box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
     display: flex;
     flex-direction: column;
