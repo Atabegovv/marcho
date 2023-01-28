@@ -87,6 +87,20 @@
   .person, .latest-post{
     display: none;
   }
+  .productone{
+    &-slider__nav-wrapper{
+      display: none;
+    }
+    &-wrapper{
+      justify-content: center;
+    }
+    .slick-next{
+      right: 10px;
+    }
+    .slick-prev{
+      left: 10px;
+    }
+  }
 }
 @media (max-width: 1100px){
   .footer-top{
@@ -163,6 +177,13 @@
       }
     }
     
+  }
+  .productone{
+    &-slider__show {
+      max-width: 500px;
+      width: 100%;
+      margin-right: 30px;
+    }
   }
 }
 @media (max-width: 900px){
@@ -255,6 +276,26 @@
     }
     &-item__link-img{
       height: auto;
+    }
+  }
+  .productone{
+    padding-top: 60px;
+    &-wrapper{
+      display: block;
+    }
+    &-slider__show {
+      margin: 0 auto 30px;
+      &-item{
+        height: 600px;
+        img{
+          height: 600px;
+        }
+      }
+    }
+    &-content{
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto;
     }
   }
 }
@@ -415,6 +456,24 @@
       }
     }
   }
+  .feedback{
+    &-tab{
+      margin-right: 30px;
+    }
+    &-form__rating{
+      flex-direction: column;
+      align-items: start;
+      &-title{
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      &-label{
+        margin-right: 0;
+        padding: 5px 0
+        ;
+      }
+    }
+  }
 }
 @media (max-width: 520px){
   .promo-clock{
@@ -432,6 +491,26 @@
     padding: 20px 0px;
     border: none;
     box-shadow: none;
+  }
+  .feedback{
+    &-scroll{
+      overflow-x: scroll;
+    }
+    &-tabs{
+      min-width: 520px;
+      margin-bottom: 10px;
+    }
+    &-reviews__author-img{
+      display: none;
+    }
+    &-form{
+      &__personal-dates{
+        display: block;
+      }
+      &__author-mail{
+        margin-left: 0;
+      }
+    }
   }
 }
 @media (max-width: 500px){
@@ -490,8 +569,24 @@
   #map{
     height: 300px;
   }
+  .blogpage-item__slider{
+    .slick-prev {
+      left: 0px;
+    }
+    .slick-next {
+      right: 0px;
+    }
+  }
   .pagination-arrows{
     display: none;
+  }
+  .productone{
+    &-slider__show-item{
+      height: 500px;
+      img{
+        height: 500px;
+      }
+    }
   }
 }
 @media (max-width: 370px){
@@ -507,6 +602,29 @@
       display: block;
       margin-left: 0;
       margin-top: 5px;
+    }
+  }
+  .productone{
+    &-slider__show-item{
+      height: 400px;
+      img{
+        height: 400px;
+      }
+    }
+    &-btns{
+      display: block;
+      &__regulate{
+        display: block;
+        margin-bottom: 10px;
+      }
+      &__added{
+        display: block;
+      }
+    }
+  }
+  .feedback{
+    &-reviews__author-time{
+      display: none;
     }
   }
 }

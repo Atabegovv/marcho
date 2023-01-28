@@ -1528,6 +1528,7 @@
     height: 50px;
     background: transparent;
     position: absolute;
+    cursor: pointer;
     transition: all .3s;
     &:hover{
       background-color: #d6d6d8;
@@ -1569,7 +1570,6 @@
     align-items: center;
     padding: 12px 0;
     border-bottom: 1px solid #f0f0f0;
-    margin-bottom: 40px;
   }
   &-tab{
     font-size: 22px;
@@ -1595,6 +1595,9 @@
         left: 0;
       }
     }
+    &__content{
+      padding: 40px 0;
+    }
   }
 
   &-reviews{
@@ -1602,6 +1605,9 @@
       display: flex;
       @extend %--ff-sf;
       margin-bottom: 40px;
+      &:last-child{
+        margin-bottom: 0;
+      }
       &-img{
         width: 70px;
         height: 70px;
@@ -1663,7 +1669,7 @@
   font-size: 22px;
   font-weight: 500;
   text-align: center;
-  padding: 50px 0 400px;
+  padding: 50px 0 100px;
 }
 .feedback-form{
   /* padding-bottom: 60px;
@@ -1869,52 +1875,40 @@
 /* slick-slider custom btn*/
 .blogpage-item__slider{
   position: relative;
-  .slick-next,
-  .slick-prev{
-    position: absolute;
-    z-index: 5;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0px 7px 20px 0px rgba(168, 168, 168, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 50%;
-    transform: translateY(-50%);
+}
+.slick-next,
+.slick-prev{
+  position: absolute;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fe3e57;
+  box-shadow: 0px 7px 20px 0px rgba(168, 168, 168, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .3s;
+  cursor: pointer;
+  path{
     transition: all .3s;
-    cursor: pointer;
-    path{
-      transition: all .3s;
-      fill: #fe3e57;
-    }
-    &:hover{
-      background-color: #fe3e57;
-      path{
-        fill: #fff;
-      }
-    }
+    fill: #fff;
   }
-  .slick-next{
-    right: 40px;
-  }
-  .slick-prev{
-    left: 40px;
-  }
-  .slick-disabled{
-    background-color: #ccc;
-    cursor: not-allowed;   
-    path{
-      opacity: .5;
-    }
-    &:hover{
-      background-color: #ccc;
-      path{
-        fill: #fe3e57;
-        opacity: .5;
-      }
-    } 
+}
+.slick-next{
+  right: 40px;
+}
+.slick-prev{
+  left: 40px;
+}
+.slick-disabled{
+  background-color: #ccc;
+  cursor: not-allowed;   
+  path{
+    fill: #fe3e57;
+    opacity: .5;
   }
 }
 /* slick-slider custom btn*/
