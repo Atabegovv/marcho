@@ -4,6 +4,12 @@ $(function () {
     $('.menu , .user-nav , .burger-line').toggleClass('active');
   });
 
+
+  $('.mobile-filter-btn').on('click' , function(){
+    $('.filter').slideToggle();
+  });
+
+
   $('.slider').slick({
     dots: true,
     arrows: false,

@@ -586,6 +586,7 @@
     &__top{
       height: 250px;
       width: 250px;
+      min-width: 250px;
     }
     &__img{
       height: 100%;
@@ -593,7 +594,7 @@
     }
     &__content{
       padding: 30px 40px;
-      max-width: 520px;
+      max-width: 100%;
       text-align: left;
       display: flex;
       align-items: center;
@@ -602,6 +603,7 @@
         @extend %--ff-sf;
         display: block;
         width: 100%;
+        margin-bottom: 10px;
       }
       &-btn{
         display: block;
@@ -915,11 +917,28 @@
   padding: 120px 0 110px;
   &-wrapper{
     display: flex;
+    position: relative;
   }
 }
+.mobile-filter-btn{
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1;
+  padding: 12px 25px;
+  background-color: $--color-red;
+  color:#fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: absolute;
+  top: -40px;
+  right: 0;
+  display: none;
+}
 .filter{
-  width: 370px;
+  max-width: 370px;
+  width: 100%;
   margin-right: 30px;
+  background-color: #fff;
   @extend %--ff-sf;
   &-item{
     padding: 35px 30px;
@@ -938,11 +957,11 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  width: 310px;
+  max-width: 100%;
   &-input{
     padding: 12px 15px;
     background-color: #f6f6f6;
-    width: 260px;
+    width: 100%;
     height: 50px;
   }
   &-btn{
@@ -1183,7 +1202,8 @@
 }
 
 .catalog-top{
-  width: 770px;
+  max-width: 770px;
+  width: 100%;
   height: 60px;
   @extend %--ff-sf;
   padding:  20px;
