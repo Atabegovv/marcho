@@ -19,15 +19,18 @@ dl,dd {
  margin: 0;
  font-weight: 400;
 }
-input,button,textarea,select {
+input,button,textarea,select, label{
  font: inherit;
 }
-input,button{
+input,button, textarea{
   border: none;
   outline: none;
   padding: 0;
   margin: 0;
   background: transparent;
+}
+textarea{
+  resize: none;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
