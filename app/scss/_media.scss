@@ -237,7 +237,7 @@
     left: 0;
     right: 0;
     z-index: 15;
-    transform: translateY(-200%);
+    transform: translateX(110%);
     transition: all .5s;
     &-list{
       display: block;
@@ -253,7 +253,7 @@
       }
     }
     &.active{
-      transform: translateY(0%);
+      transform: translateX(0%);
     }
   }
   .user-nav{
@@ -608,13 +608,13 @@
     align-items: center;
     justify-content: space-around;
     padding: 20px 0;
-    transform: translateY(-500%);
+    transform: translateX(110%);
     transition: all .5s;
     &__link + &__link{
       margin-left: 0;
     }
     &.active{
-      transform: translateY(0%);
+      transform: translateX(0%);
     }
   }
   .menu{
