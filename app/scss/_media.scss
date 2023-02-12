@@ -113,6 +113,10 @@
     margin-right: 0;
     margin-left: auto;
     display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 50;
     &-item{
       padding: 35px 15px;
       border: none;
