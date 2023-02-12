@@ -11,5 +11,5 @@ npm-shrinkwrap.json
 package-lock.json
 node_modules/
 
-dist/
+
 app/css/*
