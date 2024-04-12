@@ -35,5 +35,8 @@
     "rateyo": "^2.3.5",
     "sass": "^1.52.3",
     "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
