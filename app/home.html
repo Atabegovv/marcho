@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *:not(svg *) {
+            all: unset;
+            list-style: none;
+            display: revert;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .home{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .home__link{
+            display: block;
+            width: 100%;
+            font: inherit;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .home__link:first-child, .home__link:last-child{
+            padding: 25px 0;
+            font-weight: 600;
+        }
+    </style>
+    <title>Marcho</title>
+</head>
+<body>
+
+<div class="home">
+    <a href="https://atabegovv.github.io/marcho/" class="home__link" target="_blank">Ссылка на github-pages</a>
+    <p>сверстано для учебных целей:</p>
+    <a href="index.html" class="home__link" target="_blank">1.Главная</a>
+    <a href="shop.html" class="home__link" target="_blank">2.Каталог</a>
+    <a href="product.html" class="home__link" target="_blank">3.Карточка товара</a>
+    <a href="contacts.html" class="home__link" target="_blank">4.Контакты</a>
+    <a href="blog.html" class="home__link" target="_blank">5.Блог</a>
+    <a href="login.html" class="home__link" target="_blank">7.Л.к.</a>
+    <a href="https://github.com/Atabegovv/marcho" class="home__link" target="_blank">Ссылка на исходники</a>
+</div>
+
+</body>
+</html>
